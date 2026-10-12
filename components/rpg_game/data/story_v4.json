@@ -1,0 +1,2150 @@
+{
+  "version": 4,
+  "chapters": [
+    {
+      "title": "첫 번째 갈림길",
+      "age": 15,
+      "events": [
+        {
+          "id": "c1-diary",
+          "title": "운동장에서 발견한 미래 다이어리",
+          "map": "school",
+          "npc": "기술썜",
+          "story": "졸업을 앞둔 운동장. 친구 하나가 오래된 다이어리를 건넨다. 「오늘부터 너희가 쓰는 인생 이야기야.」 선생님은 무엇을 소중히 여기고 싶은지 물었다.",
+          "choices": [
+            {
+              "label": "새로운 것을 배우고 싶어요",
+              "result": "모르는 세계를 탐험하겠다는 첫 문장을 적었다.",
+              "self": {
+                "learning": 7,
+                "satisfaction": 3
+              },
+              "world": {},
+              "flags": {
+                "value": "learning"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "사람과 관계를 지키고 싶어요",
+              "result": "어려울 때 서로 돕는 삶을 꿈꾸었다.",
+              "self": {
+                "connections": 6
+              },
+              "world": {
+                "communityTrust": 3
+              },
+              "flags": {
+                "value": "connection"
+              },
+              "relationships": {
+                "friend": 4
+              }
+            },
+            {
+              "label": "나만의 속도를 찾아가고 싶어요",
+              "result": "남과 다른 길도 선택할 수 있다고 다짐했다.",
+              "self": {
+                "satisfaction": 7,
+                "health": 3
+              },
+              "world": {},
+              "flags": {
+                "value": "independent"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c1-friends",
+          "title": "졸업 앨범 속 세 친구",
+          "map": "room-2-1",
+          "npc": "동급생 하나",
+          "story": "친구 세 명이 진로를 두고 서로 다른 의견을 말한다. 한 친구는 대학을, 다른 친구는 기술을, 또 다른 친구는 일을 배우고 싶어 한다. 오래 이어질 관계를 위해 무엇을 할까?",
+          "choices": [
+            {
+              "label": "서로의 꿈을 적어 서로 응원한다",
+              "result": "각자의 길이 달라도 연락을 이어 가기로 했다.",
+              "self": {
+                "connections": 6
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "friendship": "kept"
+              },
+              "relationships": {
+                "friend": 11
+              }
+            },
+            {
+              "label": "학교 축제에서 함께 추억을 만든다",
+              "result": "졸업 전 무대를 꾸미며 우정의 시간을 보냈다.",
+              "self": {
+                "satisfaction": 7
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "friendship": "festival"
+              },
+              "relationships": {
+                "friend": 6
+              }
+            },
+            {
+              "label": "혼자 진로를 조사한 뒤 다시 만난다",
+              "result": "스스로 정보를 찾은 뒤 친구에게 공유했다.",
+              "self": {
+                "learning": 7
+              },
+              "world": {},
+              "flags": {
+                "friendship": "research"
+              },
+              "relationships": {
+                "friend": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c1-counsel",
+          "title": "진로상담실의 네 가지 길",
+          "map": "career",
+          "npc": "진로상담사",
+          "story": "진로상담사가 실제 교육과 직업훈련 경로를 소개한다. 고등학교 진학을 미루는 경우에도 청소년 근로 규정과 검정고시, 직업훈련을 알아봐야 한다.",
+          "choices": [
+            {
+              "label": "일반고 진학",
+              "result": "교과 공부와 탐색 활동을 이어 가기로 했다.",
+              "self": {
+                "learning": 8
+              },
+              "world": {
+                "localEconomy": 1
+              },
+              "flags": {
+                "education": "general"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "특성화고·직업계고 진학",
+              "result": "기술 실습과 직업 탐색을 동시에 시작하기로 했다.",
+              "self": {
+                "learning": 5,
+                "career": 5
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {
+                "education": "vocational"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "대안 학습·직업훈련과 검정고시 준비",
+              "result": "상담을 통해 안전한 학습 계획과 법적 조건을 확인했다.",
+              "self": {
+                "learning": 5,
+                "career": 3
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {
+                "education": "alternative"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c1-letter",
+          "title": "15세의 나에게 보내는 편지",
+          "map": "school",
+          "npc": "기술썜",
+          "story": "기술썜이 봉투를 건넨다. 「미래에 어떤 일이 생겨도 다시 배울 수 있어.」 봉투에는 50년 뒤 열어 볼 약속이 들어 있다.",
+          "choices": [
+            {
+              "label": "변화를 두려워하지 않겠다고 쓴다",
+              "result": "첫 편지를 다이어리에 넣었다.",
+              "self": {
+                "satisfaction": 4
+              },
+              "world": {
+                "communityTrust": 1
+              },
+              "flags": {
+                "promise": "change"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "도움이 필요하면 요청하겠다고 쓴다",
+              "result": "함께 살아가는 약속을 남겼다.",
+              "self": {
+                "connections": 4
+              },
+              "world": {
+                "socialSafetyNet": 1
+              },
+              "flags": {
+                "promise": "support"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "평생 무언가를 배우겠다고 쓴다",
+              "result": "미래의 배움을 위한 작은 약속을 남겼다.",
+              "self": {
+                "learning": 4
+              },
+              "world": {},
+              "flags": {
+                "promise": "learn"
+              },
+              "relationships": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "서로 다른 길, 같은 고민",
+      "age": 18,
+      "events": [
+        {
+          "id": "c2-newday",
+          "title": "새로운 교문과 새로운 시간표",
+          "map": "library",
+          "npc": "오랜 친구",
+          "story": "진학과 직업훈련 이후 몇 년이 흘렀다. 친구가 도서관 앞에서 근황을 물어본다. 지금 내게 가장 중요한 것은 무엇일까?",
+          "choices": [
+            {
+              "label": "나의 하루를 정리하고 공부 시간을 확보한다",
+              "result": "빠듯해도 스스로 조정할 수 있는 시간표를 만들었다.",
+              "self": {
+                "learning": 6,
+                "health": 2
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "직업 체험을 신청하고 현장을 살펴본다",
+              "result": "현장의 사람과 작업을 직접 만나 진로 폭을 넓혔다.",
+              "self": {
+                "career": 7,
+                "connections": 3
+              },
+              "world": {
+                "localEconomy": 1
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "쉬는 시간을 마련하고 친구와 이야기한다",
+              "result": "마음의 여유를 지키며 서로의 고민을 들어주었다.",
+              "self": {
+                "health": 5,
+                "connections": 4
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "education": "general"
+              },
+              "story": "일반고 3학년, 모의고사 성적표와 동아리 공연 날짜가 겹쳤다. 어떤 것을 먼저 살펴볼까?",
+              "npc": "고등학교 친구",
+              "choices": [
+                {
+                  "label": "동아리 공연을 준비하며 공부 계획을 조정한다",
+                  "result": "공연을 함께 마치고 새로운 공부 계획을 세웠다.",
+                  "self": {
+                    "connections": 6,
+                    "learning": 3
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "친구와 시험 공부법을 나눈다",
+                  "result": "함께 공부하며 불안함을 덜었다.",
+                  "self": {
+                    "learning": 6,
+                    "connections": 3
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "진로 상담을 요청한다",
+                  "result": "성적 하나만으로 미래를 결정하지 않아도 된다는 사실을 알았다.",
+                  "self": {
+                    "satisfaction": 5,
+                    "learning": 4
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            },
+            {
+              "when": {
+                "education": "vocational"
+              },
+              "story": "직업계고 현장 실습을 준비한다. 실습처의 안전과 근무 조건을 확인할 시간이 필요하다.",
+              "npc": "실습 담당자",
+              "choices": [
+                {
+                  "label": "안전교육과 실습 계약부터 확인한다",
+                  "result": "안전한 실습 환경을 확인하고 권리를 배웠다.",
+                  "self": {
+                    "learning": 5,
+                    "career": 4
+                  },
+                  "world": {
+                    "socialSafetyNet": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "선배에게 일과 학습의 균형을 묻는다",
+                  "result": "선배와 연락을 이어 가기로 했다.",
+                  "self": {
+                    "career": 5,
+                    "connections": 4
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "자격증 공부와 휴식 계획을 나눈다",
+                  "result": "무리하지 않고 계획을 조정했다.",
+                  "self": {
+                    "learning": 5,
+                    "health": 4
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            },
+            {
+              "when": {
+                "education": "alternative"
+              },
+              "story": "진학을 유예한 너는 직업훈련 상담과 검정고시 준비를 병행한다. 허용되는 활동과 학습권을 먼저 확인한다.",
+              "npc": "청소년 진로 멘토",
+              "choices": [
+                {
+                  "label": "검정고시 준비반을 신청한다",
+                  "result": "추후 진학의 기회를 넓혔다.",
+                  "self": {
+                    "learning": 9
+                  },
+                  "world": {
+                    "socialSafetyNet": 1
+                  },
+                  "flags": {
+                    "secondChance": "ready"
+                  },
+                  "relationships": {}
+                },
+                {
+                  "label": "보호 장치가 있는 직업 체험을 선택한다",
+                  "result": "안전 수칙을 익히며 새로운 기술을 접했다.",
+                  "self": {
+                    "career": 8
+                  },
+                  "world": {
+                    "socialSafetyNet": 1
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "학습 상담과 생활 지원을 함께 알아본다",
+                  "result": "필요한 지원을 신청하고 시간을 확보했다.",
+                  "self": {
+                    "health": 4,
+                    "learning": 4
+                  },
+                  "world": {
+                    "socialSafetyNet": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c2-crisis",
+          "title": "시험과 생활이 겹친 오후",
+          "map": "home",
+          "npc": "가족",
+          "story": "시험 또는 자격 평가가 다가오는데 집에도 도와야 할 일이 생겼다. 가족과 일정을 맞추어 보는 것이 필요하다.",
+          "choices": [
+            {
+              "label": "가족과 역할을 나누고 공부 시간을 확보한다",
+              "result": "가족들이 시간을 나누며 서로의 일을 존중했다.",
+              "self": {
+                "learning": 5,
+                "connections": 6
+              },
+              "world": {
+                "familySupport": 3
+              },
+              "flags": {},
+              "relationships": {
+                "family": 6
+              }
+            },
+            {
+              "label": "돌봄과 학습 지원을 알아본다",
+              "result": "혼자 해결하지 않고 지역의 자원을 연결했다.",
+              "self": {
+                "learning": 4
+              },
+              "world": {
+                "socialSafetyNet": 5,
+                "familySupport": 3
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "당장 가능한 일부터 처리하고 계획을 바꾼다",
+              "result": "계획은 바뀌었지만 다시 시작할 여지는 남았다.",
+              "self": {
+                "health": 3,
+                "satisfaction": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {
+                "family": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "c2-choice",
+          "title": "졸업 이후를 향한 결정",
+          "map": "career",
+          "npc": "진로상담사",
+          "story": "상담실 게시판에는 대학, 직업교육, 취업 준비, 창업 기초, 휴식과 탐색 등이 적혀 있다. 지금 원하는 다음 길을 선택한다.",
+          "choices": [
+            {
+              "label": "대학·전문대학 진학을 준비한다",
+              "result": "원하는 분야와 필요한 전형을 알아보았다.",
+              "self": {
+                "learning": 8
+              },
+              "world": {},
+              "flags": {
+                "nextPath": "college"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "취업·기술교육을 준비한다",
+              "result": "직업 상담과 기술 훈련 과정을 살펴보았다.",
+              "self": {
+                "career": 8
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {
+                "nextPath": "work"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "진로 재탐색·검정고시·다른 배움의 길",
+              "result": "다른 속도로 걸으며 다음 기회를 남겨 두었다.",
+              "self": {
+                "satisfaction": 5,
+                "learning": 4
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {
+                "nextPath": "explore"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c2-reunion",
+          "title": "졸업날의 사진",
+          "map": "school",
+          "npc": "오랜 친구",
+          "story": "졸업을 축하하는 사진을 찍기로 했다. 같은 길로 가지 않아도 관계를 어떻게 이어 갈지 정할 수 있다.",
+          "choices": [
+            {
+              "label": "매년 한 번 만나자고 약속한다",
+              "result": "오랜 친구와의 만남이 미래의 사건에 영향을 준다.",
+              "self": {
+                "connections": 5
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "reunion": "annual"
+              },
+              "relationships": {
+                "friend": 6
+              }
+            },
+            {
+              "label": "서로 배운 것을 편지로 공유한다",
+              "result": "친구와 새로운 배움을 나눌 통로가 생겼다.",
+              "self": {
+                "learning": 4,
+                "connections": 3
+              },
+              "world": {},
+              "flags": {
+                "reunion": "letters"
+              },
+              "relationships": {
+                "friend": 5
+              }
+            },
+            {
+              "label": "각자의 앞날을 응원하며 인사한다",
+              "result": "서로 다른 시간표도 존중하기로 했다.",
+              "self": {
+                "satisfaction": 4
+              },
+              "world": {},
+              "flags": {
+                "reunion": "open"
+              },
+              "relationships": {
+                "friend": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "독립과 새로운 도전",
+      "age": 23,
+      "events": [
+        {
+          "id": "c3-door",
+          "title": "스물셋, 내 이름의 문",
+          "map": "home",
+          "npc": "미래의 나",
+          "story": "스물셋의 첫 자취방 문을 열었다. 학업, 일, 학습 지원과 생활비가 한꺼번에 현실이 된다.",
+          "choices": [
+            {
+              "label": "수입과 지출을 적으며 생활을 설계한다",
+              "result": "현실적인 생활 계획을 세웠다.",
+              "self": {
+                "money": 8,
+                "satisfaction": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "친구와 주거 정보를 나누고 함께 방법을 찾는다",
+              "result": "보증금과 주거 지원 정보를 공유했다.",
+              "self": {
+                "connections": 7
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "건강한 식사와 휴식부터 챙긴다",
+              "result": "독립은 자신의 몸을 돌보는 일이라는 사실을 배웠다.",
+              "self": {
+                "health": 8
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "nextPath": "college"
+              },
+              "story": "대학 생활을 시작했다. 전공 실습과 아르바이트 시간이 겹치고 등록금도 걱정된다.",
+              "npc": "대학 선배",
+              "choices": [
+                {
+                  "label": "장학금·근로 지원을 알아본다",
+                  "result": "필요한 제도와 담당 부서를 찾았다.",
+                  "self": {
+                    "money": 7,
+                    "learning": 4
+                  },
+                  "world": {
+                    "socialSafetyNet": 3
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "전공 실습을 우선하며 지출을 조정한다",
+                  "result": "실습에서 배운 것들이 쌓였다.",
+                  "self": {
+                    "learning": 8,
+                    "money": -2
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "동료와 팀 프로젝트를 꾸린다",
+                  "result": "함께 배우는 경험이 사람을 연결했다.",
+                  "self": {
+                    "learning": 5,
+                    "connections": 5
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            },
+            {
+              "when": {
+                "nextPath": "work"
+              },
+              "story": "첫 직장의 근무표를 받아 들었다. 실무에서 배울 기술과 생활비를 동시에 고민한다.",
+              "npc": "직장 동료",
+              "choices": [
+                {
+                  "label": "멘토와 직무 학습 계획을 만든다",
+                  "result": "기술과 관계를 모두 조금씩 쌓았다.",
+                  "self": {
+                    "career": 7,
+                    "learning": 5
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "안전과 노동 조건을 먼저 살펴본다",
+                  "result": "자신의 권리와 안전을 확인했다.",
+                  "self": {
+                    "health": 5,
+                    "career": 5
+                  },
+                  "world": {
+                    "socialSafetyNet": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "급여 일부를 저축하며 생활을 꾸린다",
+                  "result": "경제적 완충 자금을 모으기 시작했다.",
+                  "self": {
+                    "money": 9
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            },
+            {
+              "when": {
+                "nextPath": "explore"
+              },
+              "story": "여러 학습과 일을 경험하며 나에게 맞는 길을 찾는 중이다. 오늘은 지역 교육기관 설명회를 찾았다.",
+              "npc": "평생교육 상담사",
+              "choices": [
+                {
+                  "label": "추가 학력 취득 과정에 등록한다",
+                  "result": "대학 진학과 전문 학습의 길을 열었다.",
+                  "self": {
+                    "learning": 9
+                  },
+                  "world": {
+                    "socialSafetyNet": 2
+                  },
+                  "flags": {
+                    "returnedStudy": "yes"
+                  },
+                  "relationships": {}
+                },
+                {
+                  "label": "단기 직무 교육을 선택한다",
+                  "result": "새로운 분야를 체험했다.",
+                  "self": {
+                    "career": 7,
+                    "learning": 4
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "여러 현장을 방문하며 선택을 유예한다",
+                  "result": "내가 원하는 생활에 관한 단서가 늘었다.",
+                  "self": {
+                    "satisfaction": 7
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c3-learning",
+          "title": "학업을 이어 갈까, 일을 시작할까",
+          "map": "library",
+          "npc": "진로 멘토",
+          "story": "도서관 게시판에 취업 공고, 전문 교육, 대학원 설명회가 함께 붙어 있다. 새로운 선택은 이전 진로에 갇히지 않는다.",
+          "choices": [
+            {
+              "label": "대학원·심화학습·추가 공부를 한다",
+              "result": "탐구의 길을 이어 갔다. 뒤의 직업 사건이 달라진다.",
+              "self": {
+                "learning": 11,
+                "money": -2
+              },
+              "world": {},
+              "flags": {
+                "advancedStudy": "yes"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "취업하고 현장에서 배운다",
+              "result": "현장의 경험과 동료를 만났다.",
+              "self": {
+                "career": 11,
+                "money": 5
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {
+                "workStyle": "employed"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "직업훈련과 학습을 병행한다",
+              "result": "일하면서 다시 배울 기회를 남겼다.",
+              "self": {
+                "learning": 7,
+                "career": 6
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {
+                "reskilled": "yes"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c3-offer",
+          "title": "첫 번째 큰 제안",
+          "map": "office",
+          "npc": "동료 하나",
+          "story": "작은 프로젝트를 맡아 달라는 연락이 왔다. 안정적인 일정과 낯선 도전 사이에서 고민된다.",
+          "choices": [
+            {
+              "label": "팀과 함께 도전한다",
+              "result": "팀이 새로운 작업 방식을 만들었다.",
+              "self": {
+                "career": 6,
+                "connections": 5
+              },
+              "world": {
+                "localEconomy": 3
+              },
+              "flags": {
+                "business": "team"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "안정적인 일과 개인 시간을 조율한다",
+              "result": "나에게 지속 가능한 작업 방식을 찾았다.",
+              "self": {
+                "health": 5,
+                "career": 4
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "창업·자기 프로젝트를 시도한다",
+              "result": "작은 실험에서 시작해 지역의 새 가게를 꿈꾸었다.",
+              "self": {
+                "career": 8,
+                "money": -5
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {
+                "business": "startup"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c3-message",
+          "title": "예전 친구에게서 온 편지",
+          "map": "cafe",
+          "npc": "오랜 친구",
+          "story": "연락이 뜸했던 중학교 친구가 메시지를 보냈다. 서로의 길을 응원하던 사진이 첨부되어 있다.",
+          "choices": [
+            {
+              "label": "만나서 서로의 고민을 듣는다",
+              "result": "서로 다른 길도 함께 걸을 수 있다고 느꼈다.",
+              "self": {
+                "connections": 8
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {},
+              "relationships": {
+                "friend": 8
+              }
+            },
+            {
+              "label": "내가 배운 기술을 공유한다",
+              "result": "친구에게 실질적인 도움을 주었다.",
+              "self": {
+                "learning": 3,
+                "connections": 5
+              },
+              "world": {
+                "localEconomy": 1
+              },
+              "flags": {},
+              "relationships": {
+                "friend": 5
+              }
+            },
+            {
+              "label": "짧은 답장과 다음 만남 약속을 보낸다",
+              "result": "바쁜 생활 속에서도 관계를 이어 갔다.",
+              "self": {
+                "health": 3,
+                "connections": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {
+                "friend": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "일, 사랑, 그리고 가족",
+      "age": 31,
+      "events": [
+        {
+          "id": "c4-meet",
+          "title": "비 오는 날의 우연한 만남",
+          "map": "cafe",
+          "npc": "새로운 이웃",
+          "story": "갑작스러운 비로 카페에 사람들이 모였다. 한 사람이 떨어진 책을 주워 준다. 대화를 나누며 서로의 관심과 고민을 알게 된다.",
+          "choices": [
+            {
+              "label": "함께 동네 행사에 참여한다",
+              "result": "서로의 생각을 듣고 천천히 친해졌다.",
+              "self": {
+                "connections": 7
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "metSomeone": "yes"
+              },
+              "relationships": {
+                "partner": 13
+              }
+            },
+            {
+              "label": "친구로 지내며 천천히 알아 간다",
+              "result": "부담 없이 관계를 쌓아 갈 수 있게 되었다.",
+              "self": {
+                "connections": 5
+              },
+              "world": {},
+              "flags": {
+                "metSomeone": "friend"
+              },
+              "relationships": {
+                "partner": 6
+              }
+            },
+            {
+              "label": "지금은 나만의 시간을 더 보내기로 한다",
+              "result": "새로운 만남을 존중하면서도 자신의 속도를 선택했다.",
+              "self": {
+                "satisfaction": 7
+              },
+              "world": {},
+              "flags": {
+                "metSomeone": "notnow"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c4-relationship",
+          "title": "관계의 갈림길",
+          "map": "culture",
+          "npc": "소중한 사람",
+          "story": "시간이 흐르고 관계에 대한 가치관이 달라질 수 있다. 누구나 결혼을 해야 하거나 연애를 해야 하는 것은 아니다.",
+          "choices": [
+            {
+              "label": "상호 존중을 바탕으로 결혼을 선택한다",
+              "result": "두 사람이 역할과 생활을 협의하고 함께하기로 했다.",
+              "self": {
+                "connections": 6,
+                "money": -3
+              },
+              "world": {
+                "familySupport": 1
+              },
+              "flags": {
+                "relationship": "married"
+              },
+              "relationships": {
+                "partner": 12
+              }
+            },
+            {
+              "label": "결혼하지 않고 동반자 관계를 이어 간다",
+              "result": "서로의 선택을 존중하는 관계를 유지한다.",
+              "self": {
+                "connections": 6,
+                "satisfaction": 4
+              },
+              "world": {},
+              "flags": {
+                "relationship": "partnered"
+              },
+              "relationships": {
+                "partner": 9
+              }
+            },
+            {
+              "label": "혼자 살거나 친구·공동체와 관계를 이어 간다",
+              "result": "독립적인 생활과 여러 관계의 가치를 발견했다.",
+              "self": {
+                "satisfaction": 7,
+                "connections": 4
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "relationship": "solo"
+              },
+              "relationships": {
+                "friend": 6
+              }
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "metSomeone": "notnow"
+              },
+              "story": "새로운 인연을 만나지 않기로 했던 시기. 친구·이웃과도 깊고 든든한 관계를 만들 수 있다. 이제 어떤 생활 방식을 선택할까?",
+              "npc": "친구",
+              "choices": [
+                {
+                  "label": "결혼에 열린 마음을 갖고 인연을 알아간다",
+                  "result": "충분히 대화하고 자신이 원하는 관계를 선택했다.",
+                  "self": {
+                    "connections": 6
+                  },
+                  "world": {},
+                  "flags": {
+                    "relationship": "married"
+                  },
+                  "relationships": {
+                    "partner": 9
+                  }
+                },
+                {
+                  "label": "동반자 관계나 우정을 중심에 둔다",
+                  "result": "서로를 존중하는 관계를 유지하기로 했다.",
+                  "self": {
+                    "connections": 8
+                  },
+                  "world": {},
+                  "flags": {
+                    "relationship": "partnered"
+                  },
+                  "relationships": {
+                    "friend": 6
+                  }
+                },
+                {
+                  "label": "비혼과 독립 생활을 선택한다",
+                  "result": "혼자 살아도 관계와 지지는 충분히 만들 수 있다.",
+                  "self": {
+                    "satisfaction": 9
+                  },
+                  "world": {
+                    "communityTrust": 2
+                  },
+                  "flags": {
+                    "relationship": "solo"
+                  },
+                  "relationships": {
+                    "neighbors": 5
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c4-care",
+          "title": "아이와 돌봄을 생각하는 오후",
+          "map": "care",
+          "npc": "돌봄센터 담당자",
+          "story": "돌봄센터에서 가족을 돌보는 이웃을 만났다. 결혼 여부와 관계없이 출산·양육과 돌봄은 개인의 선택이며 사회의 지원도 중요하다.",
+          "choices": [
+            {
+              "label": "아이를 맞이하고 돌봄을 함께 준비한다",
+              "result": "양육 계획과 지역 돌봄 지원을 함께 알아보았다.",
+              "self": {
+                "connections": 5,
+                "money": -5
+              },
+              "world": {
+                "familySupport": 3,
+                "populationVitality": 1
+              },
+              "flags": {
+                "children": "yes"
+              },
+              "relationships": {
+                "family": 6
+              }
+            },
+            {
+              "label": "자녀 없이 살며 관계와 일상을 가꾼다",
+              "result": "아이를 낳지 않는 선택도 온전히 존중받았다.",
+              "self": {
+                "satisfaction": 7,
+                "health": 3
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {
+                "children": "no"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "지금은 결정하지 않고 상황을 더 살핀다",
+              "result": "선택을 미룰 수 있으며 원하는 때 다시 고민할 수 있다.",
+              "self": {
+                "health": 5
+              },
+              "world": {
+                "familySupport": 1
+              },
+              "flags": {
+                "children": "undecided"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c4-schedule",
+          "title": "겹친 일정, 함께 만드는 하루",
+          "map": "home",
+          "npc": "가족과 친구",
+          "story": "일터의 연락과 가까운 사람의 약속이 겹쳤다. 혼자 감당하려는 대신 함께 해결할 방법을 찾는다.",
+          "choices": [
+            {
+              "label": "직장에서 유연 근무를 협의한다",
+              "result": "일과 관계를 함께 지킬 수 있는 방법을 마련했다.",
+              "self": {
+                "career": 4,
+                "health": 5
+              },
+              "world": {
+                "familySupport": 3,
+                "socialSafetyNet": 2
+              },
+              "flags": {},
+              "relationships": {
+                "family": 4
+              }
+            },
+            {
+              "label": "가족·동료와 역할표를 만든다",
+              "result": "돌봄과 생활의 책임을 공평하게 나누었다.",
+              "self": {
+                "connections": 7
+              },
+              "world": {
+                "familySupport": 4,
+                "communityTrust": 2
+              },
+              "flags": {},
+              "relationships": {
+                "family": 7
+              }
+            },
+            {
+              "label": "지역 지원과 돌봄 서비스를 연결한다",
+              "result": "사회적 지원이 개인의 삶을 받쳐 주었다.",
+              "self": {
+                "satisfaction": 6
+              },
+              "world": {
+                "socialSafetyNet": 5,
+                "familySupport": 3
+              },
+              "flags": {},
+              "relationships": {}
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "children": "no"
+              },
+              "story": "친구의 중요한 약속과 직장에서의 일정이 겹쳤다. 자녀가 없어도 일과 돌봄, 관계의 균형은 필요하다.",
+              "npc": "친구",
+              "choices": [
+                {
+                  "label": "직장에 일정 조정을 요청한다",
+                  "result": "동료와 서로의 시간을 존중했다.",
+                  "self": {
+                    "health": 5,
+                    "career": 4
+                  },
+                  "world": {
+                    "socialSafetyNet": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "친구와 시간을 나누어 준비한다",
+                  "result": "서로의 약속을 조정하며 우정을 지켰다.",
+                  "self": {
+                    "connections": 7
+                  },
+                  "world": {
+                    "communityTrust": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "지역 행사 참여를 함께 준비한다",
+                  "result": "다양한 관계를 통해 생활의 기반을 넓혔다.",
+                  "self": {
+                    "satisfaction": 5
+                  },
+                  "world": {
+                    "communityTrust": 5
+                  },
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "내가 선택한 삶의 무게",
+      "age": 41,
+      "events": [
+        {
+          "id": "c5-return",
+          "title": "오랜만에 돌아온 마을",
+          "map": "town",
+          "npc": "마을 안내자",
+          "story": "41세가 되어 다시 마을 광장을 걸었다. 익숙한 가게도, 새로운 간판도 보인다. 시간이 흐르며 지역의 모습이 달라지고 있다.",
+          "choices": [
+            {
+              "label": "오래된 상점을 찾아 지역 소식을 듣는다",
+              "result": "상인의 목소리에서 새로운 문제를 발견했다.",
+              "self": {
+                "connections": 5
+              },
+              "world": {
+                "communityTrust": 3,
+                "localEconomy": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "직업 변화를 준비하며 정보부터 찾는다",
+              "result": "다음 전환을 위한 준비를 시작했다.",
+              "self": {
+                "learning": 7,
+                "career": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "거리를 걷고 내 건강을 점검한다",
+              "result": "한 번 더 자신의 일상을 돌아보게 되었다.",
+              "self": {
+                "health": 7,
+                "satisfaction": 4
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c5-responsibility",
+          "title": "서로 다른 책임",
+          "map": "home",
+          "npc": "나를 아는 사람",
+          "story": "중년의 일상에는 직업과 관계의 책임이 겹쳐진다. 이전 결정에 따라 고민의 모습도 달라진다.",
+          "choices": [
+            {
+              "label": "주변 사람과 계획을 조정한다",
+              "result": "혼자 버티지 않고 역할을 나누었다.",
+              "self": {
+                "connections": 6,
+                "health": 4
+              },
+              "world": {
+                "familySupport": 4
+              },
+              "flags": {},
+              "relationships": {
+                "family": 4
+              }
+            },
+            {
+              "label": "전문 상담과 제도를 찾아본다",
+              "result": "현실적으로 활용할 수 있는 지원을 연결했다.",
+              "self": {
+                "health": 4
+              },
+              "world": {
+                "socialSafetyNet": 5
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "시간을 확보해 다시 배운다",
+              "result": "현실의 문제를 새로운 배움으로 풀어 보았다.",
+              "self": {
+                "learning": 8,
+                "money": -2
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "children": "yes"
+              },
+              "story": "자녀의 학교 행사와 중요한 업무가 같은 날이다. 아이의 의견도 듣고 어른들이 어떻게 역할을 나눌지 함께 논의한다.",
+              "npc": "가족",
+              "choices": [
+                {
+                  "label": "양육자들이 일정을 공평하게 나눈다",
+                  "result": "서로 돌볼 책임을 조정하고 행사에 함께했다.",
+                  "self": {
+                    "connections": 6
+                  },
+                  "world": {
+                    "familySupport": 5
+                  },
+                  "flags": {},
+                  "relationships": {
+                    "family": 7
+                  }
+                },
+                {
+                  "label": "학교 및 공공 돌봄 서비스를 찾는다",
+                  "result": "가족만의 책임으로 두지 않고 지역 자원을 연결했다.",
+                  "self": {
+                    "health": 4
+                  },
+                  "world": {
+                    "socialSafetyNet": 5,
+                    "familySupport": 4
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "직장과 사전에 일정을 조정한다",
+                  "result": "동료가 상황을 이해하고 일정을 나눠 맡았다.",
+                  "self": {
+                    "career": 4,
+                    "connections": 3
+                  },
+                  "world": {
+                    "communityTrust": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            },
+            {
+              "when": {
+                "business": "startup"
+              },
+              "story": "시작했던 사업에 중요한 계약 제안이 들어왔다. 성장의 기회지만 직원들의 근무 여건도 고려해야 한다.",
+              "npc": "사업 동료",
+              "choices": [
+                {
+                  "label": "직원과 함께 지속 가능한 계약을 협의한다",
+                  "result": "작은 사업의 신뢰를 지켰다.",
+                  "self": {
+                    "career": 7,
+                    "connections": 4
+                  },
+                  "world": {
+                    "localEconomy": 4
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "위험을 검토하고 규모를 조정한다",
+                  "result": "무리한 확장 대신 안정적인 운영을 선택했다.",
+                  "self": {
+                    "money": 7
+                  },
+                  "world": {
+                    "localEconomy": 2
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "새 기술을 도입하고 팀을 교육한다",
+                  "result": "동료와 함께 일터를 바꾸었다.",
+                  "self": {
+                    "learning": 7
+                  },
+                  "world": {
+                    "localEconomy": 3
+                  },
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c5-learning",
+          "title": "다시 열린 배움의 문",
+          "map": "library",
+          "npc": "평생교육 선생님",
+          "story": "동네 도서관에서 새로운 기술 강좌가 열린다. 20대의 선택은 40대의 가능성을 고정하지 않는다.",
+          "choices": [
+            {
+              "label": "전혀 새로운 분야의 공부를 시작한다",
+              "result": "새로운 길을 위한 지식을 쌓았다.",
+              "self": {
+                "learning": 10
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {
+                "returnedStudy": "yes"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "이미 쌓은 직업 경험을 후배와 나눈다",
+              "result": "내가 배운 것이 누군가의 시작을 도왔다.",
+              "self": {
+                "connections": 7,
+                "career": 4
+              },
+              "world": {
+                "communityTrust": 4
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "일과 건강을 돌아보고 배움의 속도를 정한다",
+              "result": "무리하지 않는 계획으로 다음 기회를 준비했다.",
+              "self": {
+                "health": 7,
+                "learning": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c5-town",
+          "title": "우리 동네를 위한 선택",
+          "map": "hall",
+          "npc": "마을 주민회의",
+          "story": "지역 주민회의에서 빈 상점과 인구 변화, 돌봄 부족이 화제가 되었다. 변화는 한 개인의 출산 여부가 아닌 경제·정책·이동·지원의 결과다.",
+          "choices": [
+            {
+              "label": "청년 일자리와 재교육 사업을 제안한다",
+              "result": "지역에 새로운 일자리와 배움의 통로가 생겼다.",
+              "self": {
+                "career": 3
+              },
+              "world": {
+                "localEconomy": 8,
+                "populationVitality": 3
+              },
+              "flags": {
+                "communityWork": "jobs"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "돌봄·의료·주거 지원을 제안한다",
+              "result": "살기 좋은 환경을 만드는 준비가 시작됐다.",
+              "self": {
+                "connections": 3
+              },
+              "world": {
+                "familySupport": 8,
+                "socialSafetyNet": 8,
+                "populationVitality": 2
+              },
+              "flags": {
+                "communityWork": "care"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "녹지·문화·세대교류 공간을 제안한다",
+              "result": "여러 세대가 함께 모일 공간이 마련됐다.",
+              "self": {
+                "satisfaction": 4
+              },
+              "world": {
+                "environment": 9,
+                "communityTrust": 8
+              },
+              "flags": {
+                "communityWork": "culture"
+              },
+              "relationships": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "예상하지 못한 변화",
+      "age": 51,
+      "events": [
+        {
+          "id": "c6-change",
+          "title": "사라지는 익숙한 일자리",
+          "map": "office",
+          "npc": "동료",
+          "story": "자동화와 경기 변화로 일터의 역할이 달라졌다. 누군가 탓하기보다 사람과 제도가 어떻게 대응할지 고민한다.",
+          "choices": [
+            {
+              "label": "재교육을 신청해 새 기술을 배운다",
+              "result": "축적한 경험에 새로운 기술을 더했다.",
+              "self": {
+                "learning": 10,
+                "career": 4
+              },
+              "world": {
+                "socialSafetyNet": 3
+              },
+              "flags": {
+                "reskilled": "yes"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "다른 분야로 전직을 준비한다",
+              "result": "새로운 일터에서 다시 시작했다.",
+              "self": {
+                "career": 8,
+                "satisfaction": 3
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {
+                "changedCareer": "yes"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "동료와 일자리 지원을 요청한다",
+              "result": "함께 문제를 알리고 지원을 연결했다.",
+              "self": {
+                "connections": 8
+              },
+              "world": {
+                "socialSafetyNet": 6,
+                "communityTrust": 4
+              },
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c6-care",
+          "title": "지켜 주던 사람을 돌보는 날",
+          "map": "hospital",
+          "npc": "병원 상담사",
+          "story": "이제는 가족이나 가까운 사람이 도움이 필요할 수도 있다. 돌봄의 부담이 한 사람에게 몰리지 않도록 선택할 수 있다.",
+          "choices": [
+            {
+              "label": "다른 가족·이웃과 역할을 나눈다",
+              "result": "돌봄 시간을 나누며 함께 버틸 방법을 찾았다.",
+              "self": {
+                "connections": 5,
+                "health": 3
+              },
+              "world": {
+                "familySupport": 3
+              },
+              "flags": {},
+              "relationships": {
+                "family": 5
+              }
+            },
+            {
+              "label": "방문 의료와 공공 돌봄을 연결한다",
+              "result": "적절한 서비스를 통해 부담을 줄였다.",
+              "self": {
+                "health": 6
+              },
+              "world": {
+                "socialSafetyNet": 6,
+                "familySupport": 4
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "일정과 건강을 재정비한다",
+              "result": "나 자신을 돌보는 일이 다른 사람을 돕는 기초가 되었다.",
+              "self": {
+                "health": 9
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ],
+          "variants": [
+            {
+              "when": {
+                "relationship": "solo"
+              },
+              "story": "가까운 친구가 치료와 회복에 도움이 필요하다고 연락했다. 가족의 형태가 달라도 서로 도울 관계를 만들 수 있다.",
+              "npc": "친구",
+              "choices": [
+                {
+                  "label": "친구들과 돌봄 일정을 나눈다",
+                  "result": "서로 부담을 분담하며 친구를 도왔다.",
+                  "self": {
+                    "connections": 7
+                  },
+                  "world": {
+                    "communityTrust": 3
+                  },
+                  "flags": {},
+                  "relationships": {
+                    "friend": 7
+                  }
+                },
+                {
+                  "label": "지역 방문 지원을 연결한다",
+                  "result": "친구가 필요한 지원을 찾아 연결했다.",
+                  "self": {
+                    "health": 3
+                  },
+                  "world": {
+                    "socialSafetyNet": 7
+                  },
+                  "flags": {},
+                  "relationships": {}
+                },
+                {
+                  "label": "친구와 회복 후의 계획을 함께 세운다",
+                  "result": "응원의 약속과 건강한 생활 계획을 세웠다.",
+                  "self": {
+                    "connections": 5,
+                    "health": 4
+                  },
+                  "world": {},
+                  "flags": {},
+                  "relationships": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c6-crisis",
+          "title": "비어 가는 광장",
+          "map": "town",
+          "npc": "가게 주인",
+          "story": "불황과 인구 이동으로 일부 가게가 문을 닫았다는 소식을 들었다. 마을의 분위기가 서서히 달라진다.",
+          "choices": [
+            {
+              "label": "이웃 가게를 연결해 작은 장터를 꾸린다",
+              "result": "지역 사람들이 다시 광장으로 모였다.",
+              "self": {
+                "connections": 6
+              },
+              "world": {
+                "localEconomy": 8,
+                "communityTrust": 7
+              },
+              "flags": {
+                "recovered": "market"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "빈 건물을 배움 공간으로 바꾸자고 제안한다",
+              "result": "배움과 일자리를 이어 줄 장소가 생겼다.",
+              "self": {
+                "learning": 5
+              },
+              "world": {
+                "localEconomy": 5,
+                "populationVitality": 4,
+                "socialSafetyNet": 3
+              },
+              "flags": {
+                "recovered": "school"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "고령 주민의 생활 이동을 돕는 사업을 시작한다",
+              "result": "안전한 통행과 돌봄을 위한 작은 변화를 만들었다.",
+              "self": {
+                "connections": 4
+              },
+              "world": {
+                "familySupport": 6,
+                "communityTrust": 5,
+                "socialSafetyNet": 4
+              },
+              "flags": {
+                "recovered": "care"
+              },
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c6-friend",
+          "title": "35년 만의 친구 이야기",
+          "map": "cafe",
+          "npc": "중학교 동창",
+          "story": "중학교 동창이 오랜 편지를 꺼냈다. 「그때 너는 이런 인생을 꿈꿨지. 요즘은 어떠니?」",
+          "choices": [
+            {
+              "label": "지금까지의 선택을 솔직히 이야기한다",
+              "result": "오래된 친구 앞에서 변한 나를 발견했다.",
+              "self": {
+                "satisfaction": 6,
+                "connections": 6
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {
+                "friend": 9
+              }
+            },
+            {
+              "label": "앞으로 하고 싶은 일을 서로 응원한다",
+              "result": "서로의 새로운 시작을 약속했다.",
+              "self": {
+                "learning": 5,
+                "connections": 5
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {
+                "friend": 6
+              }
+            },
+            {
+              "label": "동네를 위한 활동에 친구를 초대한다",
+              "result": "친구와 함께 작은 마을 활동을 시작했다.",
+              "self": {
+                "connections": 6
+              },
+              "world": {
+                "communityTrust": 5
+              },
+              "flags": {},
+              "relationships": {
+                "friend": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "인생의 다음 장",
+      "age": 60,
+      "events": [
+        {
+          "id": "c7-finance",
+          "title": "은퇴는 하나의 날이 아니다",
+          "map": "home",
+          "npc": "미래의 나",
+          "story": "60세에 생활 기록을 펼쳤다. 사람에 따라 은퇴 시기도 다르고 앞으로도 계속 일을 하거나 배울 수 있다.",
+          "choices": [
+            {
+              "label": "수입과 지출·노후 지원을 점검한다",
+              "result": "생활 기반과 이용할 수 있는 제도를 확인했다.",
+              "self": {
+                "money": 8
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "새로운 일·작은 프로젝트를 준비한다",
+              "result": "하고 싶은 활동을 찾으며 앞으로를 설계했다.",
+              "self": {
+                "career": 5,
+                "satisfaction": 5
+              },
+              "world": {
+                "localEconomy": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "생활 방식을 조정하고 건강을 챙긴다",
+              "result": "삶의 속도를 새롭게 조정했다.",
+              "self": {
+                "health": 9,
+                "satisfaction": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c7-health",
+          "title": "건강검진이 알려 준 것",
+          "map": "hospital",
+          "npc": "건강 상담사",
+          "story": "건강은 사람마다 다르게 변화한다. 검진 결과와 상담을 바탕으로 실천 가능한 계획을 세운다.",
+          "choices": [
+            {
+              "label": "운동과 수면 습관을 조정한다",
+              "result": "무리하지 않는 산책과 휴식 시간을 마련했다.",
+              "self": {
+                "health": 9
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "지역 건강 프로그램에 참여한다",
+              "result": "지역 사람들과 건강을 돌보는 시간을 만들었다.",
+              "self": {
+                "health": 6,
+                "connections": 5
+              },
+              "world": {
+                "socialSafetyNet": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "지금 가능한 활동과 도움을 확인한다",
+              "result": "상황에 맞는 지원과 생활 계획을 찾았다.",
+              "self": {
+                "health": 5,
+                "satisfaction": 5
+              },
+              "world": {
+                "familySupport": 2
+              },
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c7-hobby",
+          "title": "나에게 남은 새로운 시작",
+          "map": "culture",
+          "npc": "문화공방 안내자",
+          "story": "일과 학업이 삶의 전부는 아니다. 하고 싶었지만 미뤄 왔던 것을 이제 시작할 수도 있다.",
+          "choices": [
+            {
+              "label": "새로운 취미를 배우고 작품을 만든다",
+              "result": "처음 하는 일에서도 즐거움을 찾았다.",
+              "self": {
+                "satisfaction": 8,
+                "learning": 5
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "후배와 함께 기술을 나눈다",
+              "result": "경험을 전하며 새로운 관계를 만들었다.",
+              "self": {
+                "connections": 7
+              },
+              "world": {
+                "communityTrust": 5
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "동네 사람들과 정원을 꾸민다",
+              "result": "동네에 작은 초록 공간이 생겼다.",
+              "self": {
+                "health": 4,
+                "connections": 4
+              },
+              "world": {
+                "environment": 6,
+                "communityTrust": 3
+              },
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c7-together",
+          "title": "변화한 마을의 마지막 회의",
+          "map": "hall",
+          "npc": "주민 회의 진행자",
+          "story": "마을이 활력을 되찾고 있을 수도, 어려움을 겪고 있을 수도 있다. 지역에는 여러 주민의 행동과 제도가 필요하다.",
+          "choices": [
+            {
+              "label": "세대가 함께 배우는 공간을 제안한다",
+              "result": "학교와 도서관에 배움의 불빛이 이어졌다.",
+              "self": {
+                "connections": 4
+              },
+              "world": {
+                "populationVitality": 5,
+                "localEconomy": 5,
+                "communityTrust": 4
+              },
+              "flags": {
+                "legacy": "learning"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "돌봄과 생활 안전망을 확장한다",
+              "result": "사람이 혼자 어려움을 감당하지 않도록 했다.",
+              "self": {
+                "connections": 3
+              },
+              "world": {
+                "socialSafetyNet": 8,
+                "familySupport": 6,
+                "communityTrust": 3
+              },
+              "flags": {
+                "legacy": "care"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "쇠퇴한 공간을 정원·문화 장소로 재생한다",
+              "result": "비어 있던 공간에 다시 주민들이 모이기 시작했다.",
+              "self": {
+                "satisfaction": 4
+              },
+              "world": {
+                "environment": 8,
+                "communityTrust": 7,
+                "localEconomy": 2
+              },
+              "flags": {
+                "legacy": "renewal"
+              },
+              "relationships": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "나의 미래 다이어리",
+      "age": 65,
+      "events": [
+        {
+          "id": "c8-return",
+          "title": "50년 만에 걷는 교문",
+          "map": "school",
+          "npc": "기술썜의 추억",
+          "story": "65세. 주인공은 서라벌여중 교문으로 돌아왔다. 건물과 거리의 모습은 마을의 변화에 따라 달라졌지만, 15세에 서 있던 자리는 그대로다.",
+          "choices": [
+            {
+              "label": "교문에서 옛 사진을 꺼낸다",
+              "result": "첫 학창 시절의 모습과 지금의 마을을 겹쳐 보았다.",
+              "self": {
+                "satisfaction": 5
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "변화한 학교의 안내문을 살핀다",
+              "result": "오랜 시간 동안 학교의 쓰임과 주변의 생활이 달라졌다.",
+              "self": {
+                "learning": 4
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "운동장에서 잠시 기억을 되짚는다",
+              "result": "50년 전의 발걸음이 다시 선명해졌다.",
+              "self": {
+                "health": 3,
+                "satisfaction": 4
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c8-classroom",
+          "title": "처음 다이어리를 펼친 교실",
+          "map": "room-2-1",
+          "npc": "오랜 친구",
+          "story": "낡은 다이어리 안에는 15세의 첫 편지가 남아 있다. 「나는 아직 어떤 어른이 될지 모르겠다. 하지만 내가 선택한 길을 걸어가 보고 싶다.」",
+          "choices": [
+            {
+              "label": "새로 배운 것들을 돌아본다",
+              "result": "선택과 변화가 나의 배움을 이어 왔다.",
+              "self": {
+                "learning": 3
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "도움받고 도왔던 사람들을 떠올린다",
+              "result": "서로 다른 관계가 나의 삶을 지탱했다.",
+              "self": {
+                "connections": 4
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "실패해도 다시 시작한 순간을 기억한다",
+              "result": "어려운 시기에도 다른 선택은 가능했다.",
+              "self": {
+                "satisfaction": 5
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c8-town",
+          "title": "내가 살아온 마을과 만나다",
+          "map": "town",
+          "npc": "마을 안내자",
+          "story": "광장에는 새로운 시설과 닫힌 가게, 혹은 다시 문을 연 공간이 보인다. 그 모습은 개인 선택뿐 아니라 주민·경제·정책·돌봄의 누적 결과다.",
+          "choices": [
+            {
+              "label": "지역 주민에게 변화의 이야기를 듣는다",
+              "result": "마을을 움직이는 것은 여러 사람과 제도라는 사실을 느꼈다.",
+              "self": {
+                "connections": 4
+              },
+              "world": {
+                "communityTrust": 2
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "미래 세대를 위해 필요한 것을 기록한다",
+              "result": "다음 세대가 사용할 수 있는 작은 제안을 남겼다.",
+              "self": {
+                "learning": 3
+              },
+              "world": {
+                "socialSafetyNet": 3
+              },
+              "flags": {},
+              "relationships": {}
+            },
+            {
+              "label": "지금의 마을을 마음속에 담는다",
+              "result": "낯선 변화 속에서도 앞으로의 가능성을 생각했다.",
+              "self": {
+                "satisfaction": 5
+              },
+              "world": {},
+              "flags": {},
+              "relationships": {}
+            }
+          ]
+        },
+        {
+          "id": "c8-last",
+          "title": "65세의 마지막 일기",
+          "map": "school",
+          "npc": "미래의 나",
+          "story": "50년 전의 교정을 다시 찾았다. 모든 삶에는 여러 모습이 있으며 65세 이후에도 이야기는 계속된다. 지금까지의 선택을 어떻게 받아들이고 싶을까?",
+          "choices": [
+            {
+              "label": "내가 선택한 길을 존중하며 계속 배운다",
+              "result": "마지막 페이지에 「배움은 앞으로도 이어진다」라고 적었다.",
+              "self": {
+                "learning": 4,
+                "satisfaction": 4
+              },
+              "world": {},
+              "flags": {
+                "lastLine": "learning"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "함께한 사람들에게 감사하며 새 관계를 꿈꾼다",
+              "result": "마지막 페이지에 「삶은 서로에게 남긴 이야기다」라고 적었다.",
+              "self": {
+                "connections": 5,
+                "satisfaction": 3
+              },
+              "world": {},
+              "flags": {
+                "lastLine": "people"
+              },
+              "relationships": {}
+            },
+            {
+              "label": "다른 인생도 가능했음을 인정하며 내일을 기대한다",
+              "result": "마지막 페이지에 「선택은 언제나 다시 시작할 수 있다」라고 적었다.",
+              "self": {
+                "satisfaction": 7
+              },
+              "world": {},
+              "flags": {
+                "lastLine": "open"
+              },
+              "relationships": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

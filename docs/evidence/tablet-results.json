@@ -1,0 +1,25 @@
+[
+  {
+    "engine": "chrome",
+    "errors": [],
+    "multiTouchCDP": true,
+    "ending": true,
+    "touchMove": true,
+    "portrait": true,
+    "restoredEnding": true,
+    "actualDevice": false
+  },
+  {
+    "engine": "webkit",
+    "errors": [],
+    "multiTouchCDP": false,
+    "ending": true,
+    "touchMove": true,
+    "portrait": true,
+    "restoredEnding": true,
+    "actualDevice": false
+  },
+  {
+    "streamlitCheckpointAck": true
+  }
+]

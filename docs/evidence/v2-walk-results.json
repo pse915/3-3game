@@ -1,0 +1,15 @@
+{
+  "actualTouchWalk": true,
+  "legs": [
+    {
+      "expected": "cafe",
+      "routeTiles": 16
+    },
+    {
+      "expected": "choice",
+      "routeTiles": 13
+    }
+  ],
+  "seconds": 8.181,
+  "positionInjection": "Only initial school teacher/book setup; town→cafe→NPC walked using CDP touch D-pad."
+}

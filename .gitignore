@@ -1,0 +1,6 @@
+.streamlit/secrets.toml
+private_data/
+__pycache__/
+*.pyc
+.venv/
+node_modules/

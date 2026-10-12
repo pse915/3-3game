@@ -1,0 +1,25 @@
+[
+  {
+    "engine": "chrome",
+    "available": true,
+    "errors": [],
+    "multiTouch": true,
+    "freeActivities": 3,
+    "handsOnWorkbench": true,
+    "customization": true,
+    "diaryFragment": true,
+    "eventResolved": true,
+    "followUpUnlocked": true,
+    "reasonAndPlan": true,
+    "offlineRestore": true,
+    "nextDay": true,
+    "portrait": true,
+    "actualDevice": false
+  },
+  {
+    "engine": "webkit",
+    "available": false,
+    "reason": "browserType.launch: Host system is missing dependencies!",
+    "actualDevice": false
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "engine": "chrome",
+    "errors": [],
+    "multiTouchCDP": true,
+    "choices": 5,
+    "touchEnding": true,
+    "fourFloorPortals": true,
+    "portrait": true,
+    "landscape": true,
+    "offlineSaveRestore": true,
+    "actualDevice": false,
+    "perf": {
+      "fps": 60.006359570016585,
+      "cache": 1,
+      "canvas": [
+        512,
+        384
+      ]
+    }
+  },
+  {
+    "engine": "webkit",
+    "errors": [],
+    "multiTouchCDP": false,
+    "choices": 5,
+    "touchEnding": true,
+    "fourFloorPortals": true,
+    "portrait": true,
+    "landscape": true,
+    "offlineSaveRestore": true,
+    "actualDevice": false,
+    "perf": {
+      "fps": 50.655869491506955,
+      "cache": 1,
+      "canvas": [
+        512,
+        384
+      ]
+    }
+  },
+  {
+    "streamlitCheckpointAck": true,
+    "liveSheets": false
+  }
+]

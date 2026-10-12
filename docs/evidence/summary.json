@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-11",
+  "version": 2,
+  "status": "development improvement build; final acceptance pending",
+  "nodeTests": 4,
+  "pythonTests": 5,
+  "choiceCombinations": 243,
+  "mapCount": 80,
+  "newAtlasCells": 32,
+  "realTabletTests": false,
+  "referenceComparison": false,
+  "liveSheets": false
+}

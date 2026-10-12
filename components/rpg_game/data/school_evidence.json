@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "schoolName": "서라벌여중",
+  "evidenceScope": "첨부 ZIP과 지시문만 확인; 최신 실측 도면과 실제 사진은 제공되지 않음",
+  "confirmedFromUserBrief": [
+    {
+      "feature": "학습지원실2부터 왼쪽 날개가 90도 꺾이는 ㄱ자 구조",
+      "status": "brief-confirmed; physical placement unverified"
+    },
+    {
+      "feature": "학교 명칭 서라벌여중",
+      "status": "brief-confirmed"
+    }
+  ],
+  "inferred": [
+    {
+      "feature": "층별 객실 순서, 치수, 문 위치, 계단 좌표",
+      "status": "provisional; original project data"
+    },
+    {
+      "feature": "외벽 벽돌·창문·지붕 재질, 방별 내부 가구 배치",
+      "status": "fictionalized for game; real photos required"
+    }
+  ],
+  "floorMaps": [
+    {
+      "id": "floor1",
+      "roomCount": 16,
+      "shape": "L-shaped corridor in data",
+      "status": "project-derived; physical validation pending"
+    },
+    {
+      "id": "floor2",
+      "roomCount": 15,
+      "shape": "L-shaped corridor in data",
+      "status": "project-derived; physical validation pending"
+    },
+    {
+      "id": "floor3",
+      "roomCount": 14,
+      "shape": "L-shaped corridor in data",
+      "status": "project-derived; physical validation pending"
+    },
+    {
+      "id": "floor4",
+      "roomCount": 13,
+      "shape": "L-shaped corridor in data",
+      "status": "project-derived; physical validation pending"
+    }
+  ],
+  "schoolRoomCount": 58,
+  "realPlanValidation": "additional source required; not represented as exact reconstruction",
+  "indoorRoomCount": 74
+}

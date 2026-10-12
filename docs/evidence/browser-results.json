@@ -1,0 +1,15 @@
+{
+  "errors": [],
+  "movementDelta": 131.99999999999636,
+  "restore": true,
+  "perf": {
+    "fps": 59.437416057326764,
+    "cacheSize": 2,
+    "map": "town"
+  },
+  "streamlitFrames": [
+    "http://127.0.0.1:8501/",
+    "http://127.0.0.1:8501/component/app.seorabeol_rpg/index.html?streamlitUrl=http%3A%2F%2F127.0.0.1%3A8501%2F"
+  ],
+  "webkit": "available"
+}

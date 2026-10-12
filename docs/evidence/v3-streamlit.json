@@ -1,0 +1,6 @@
+{
+  "serverCheckpointAck": true,
+  "activityCheckpointAck": true,
+  "liveSheets": false,
+  "errors": []
+}

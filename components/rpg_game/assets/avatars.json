@@ -1,0 +1,39 @@
+{
+  "file": "avatars.png",
+  "originalAuthoring": "tools/build_avatars.py",
+  "avatars": 6,
+  "frame": [
+    32,
+    48
+  ],
+  "columns": 8,
+  "directionRows": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "avatarHeight": 192,
+  "walkFrames": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "runFrames": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "styles": [
+    "bob",
+    "pony",
+    "long",
+    "short",
+    "curly",
+    "braid"
+  ],
+  "variants": "distinct hairstyle, skin, clothing and satchel; no hue rotation",
+  "sha256": "f53f97a47a9406185251fc8689e065496eee15c7a6220c2d07cbae75e406280f"
+}

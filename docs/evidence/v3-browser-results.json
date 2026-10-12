@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "choices": 5,
+  "ending": true,
+  "restore": true,
+  "guideDefault": true,
+  "perf": {
+    "fps": 59.81308717656171,
+    "cacheSize": 2
+  }
+}

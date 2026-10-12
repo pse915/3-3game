@@ -1,0 +1,161 @@
+??all 0??2 first-answer boundaries retain retries and the exact baseline (2.449ms)
+??unanswered and legacy results are unknown, never wrong or invented (0.147ms)
+??low readiness recovers via policies without altering the quiz record; high readiness suffers social shocks (0.3486ms)
+??environment plans cache, change with recovery and never modify map collision/portals (10.0598ms)
+??260 complete life paths mix 0??2 initial scores, policy recovery, restoration and all quest checkpoints (373.1727ms)
+??tests 5
+??suites 0
+??pass 5
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 406.8011
+??collectible diary fragments are reachable, persist once, and do not replace core progress (9.1022ms)
+??tests 1
+??suites 0
+??pass 1
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 26.5796
+??legacy v2 state extends without rewriting completed diary or authentication (3.8896ms)
+??free activities have no story-order gate, while genuine follow-ups require an earlier action (0.5154ms)
+??unaffordable, exhausted and invalid choices are atomic; affordable rest is always offered (0.1861ms)
+??events are once per activity checkpoint, persist while pending, and block advancing without resolving (0.3499ms)
+??daily repetition limit and new day recovery make resources meaningful (0.1775ms)
+??career mini-games are distinguishable and success grants bounded learning feedback (0.2182ms)
+??all eight future portraits are reachable from distinct conditions and do not rank lives (0.2185ms)
+??restored saves reject broken resources; summary keeps choices, reasons and future plans (0.2703ms)
+??tests 8
+??suites 0
+??pass 8
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 23.8901
+??reported English output is translated and Korean historical logs are supported (0.7875ms)
+??all supported story effects and NPC relationship changes have Korean labels (0.5912ms)
+??200 different complete lifetimes never show raw English status keys; save remains valid (62.5752ms)
+??regional scenarios use translated change labels and cannot be repeated (0.4723ms)
+??visible page chrome uses Korean headings instead of English development labels (1.0607ms)
+??tests 5
+??suites 0
+??pass 5
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 85.5105
+??budget remains affordable and balances three concrete allocations (1.7402ms)
+??recipe hands-on order and allergen restriction affect work result (0.3124ms)
+??code requires execution; wall collisions and corrected movement produce different feedback (0.3111ms)
+??route disallows teleports and walks around the construction barrier (1.0142ms)
+??schedule, diagnosis and lesson require completed assignments before submission (0.6918ms)
+??pixel design is created by painting cells, and incomplete rows reduce feedback (0.3727ms)
+??tests 6
+??suites 0
+??pass 6
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 19.6834
+??Spatial query returns exactly visible town objects without duplicates (5.6455ms)
+??Large objects covering multiple chunks do not render twice (0.2261ms)
+??Interrupted story restores first missing event, not infinite panel recursion (1.0487ms)
+??Save inside blocked wall respawns safely rather than trapping player (0.8871ms)
+??No traversable tile returns explicit error instead of a silent softlock (0.3947ms)
+??tests 5
+??suites 0
+??pass 5
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 21.2469
+??stable one-goal-at-a-time action and chapter progression (6.8846ms)
+??every main-story map connects through a real walkable first portal (38.7525ms)
+??bounded BFS avoids collision tiles and respects unreachable targets (0.2987ms)
+??map switch waypoints are from actual map portals, not fake coordinates (0.1449ms)
+??help is paused by UI externally and appears only at 30/60/90 s (0.2182ms)
+??focus setting and guide UI do not affect legacy validation or story keys (0.2138ms)
+??game includes guide controls, focus setting, localized navigation and star overlay (1.1337ms)
+??tests 7
+??suites 0
+??pass 7
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 73.4285
+??15 unique accurate-keyed quizzes cover eight chapters, five senior strategies and six low-birth tasks (0.7295ms)
+??quiz wrong answers retry without penalties, correct answers unlock but never apply a policy automatically (3.4927ms)
+??a restored V4 story has no mandatory backlog and keeps its record/flags (1.5124ms)
+??optional quizzes unlock only in the older-age chapters and are never forced (0.7321ms)
+??200 randomized complete lifetimes, each with all 12 mandatory quizzes, survive legacy save validators (143.7256ms)
+??community projects have reachable, separate interaction points and do not block portals (6.3371ms)
+??tests 6
+??suites 0
+??pass 6
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 178.7849
+??all 32 scenes point to real maps with reachable story markers (16.3991ms)
+??a legacy v3 state without story data upgrades without losing v3 progress (3.3036ms)
+??each choice is applied once; choices progress and all meters stay bounded (1.833ms)
+??social deterioration and later re-investment visibly change town tier in saved state (0.678ms)
+??tests 4
+??suites 0
+??pass 4
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 42.7091
+??8 chapters with 32 interconnected playable events and 11 branching variants (1.0814ms)
+??200 distinct routes reach age 65; saved state passes legacy v3 validator (70.7287ms)
+??all education pathways and family pathways have contextual scenes (0.6119ms)
+??regional economic and migration changes can cause decay and recovery without blaming childlessness (0.5343ms)
+??every mapped teacher has the exact requested name 湲곗닠??(18.805ms)
+??tests 5
+??suites 0
+??pass 5
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 111.1749
+??243 life paths: order, idempotence, valid saves, reflection required after five choices (8.9712ms)
+??80 maps have cross-map routes and reachable local exits, NPCs, targets (61.2177ms)
+??restrooms use sanitary fixtures and no classroom or office furniture (18.4017ms)
+??route rejects row overflow and avoids obstacles (0.6602ms)
+??tests 4
+??suites 0
+??pass 4
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 107.6111
+??all 32 main scenes, 96 main choices and 11 contextual variations have Russian translations (1.784ms)
+??all 15 quiz questions, hints, choices, projects and 11 policy goals are Russian (2.4797ms)
+??original legacy exploratory quests and freely chosen activity labels are Russian (0.2609ms)
+??every map, NPC and school interaction has a Russian name or description (19.2434ms)
+??locale switching never changes game state or answer scoring (4.0399ms)
+??saved world snapshots are stable and differ after projects or demographic decline (0.2756ms)
+??both ages and both locations render original tiles/assets and visibly distinct changes (12.0287ms)
+??live UI text nodes switch Russian?밙orean?밨ussian without losing the Korean source (0.3678ms)
+??200 life stories keep valid snapshots and save state under alternating languages (76.2399ms)
+??tests 9
+??suites 0
+??pass 9
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 145.3581

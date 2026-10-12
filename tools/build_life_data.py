@@ -1,0 +1,131 @@
+import json
+from pathlib import Path
+root=Path(__file__).resolve().parents[1]/'components'/'rpg_game'/'data'
+activities=[]
+def activity(id,title,map,domain,time,concept,choices,**kw):
+    activities.append(dict(id=id,title=title,map=map,domain=domain,time=time,concept=concept,choices=[dict(label=c[0],effect=c[1],consequence=c[2],followUp=c[3] if len(c)>3 else []) for c in choices],**kw))
+activity('housing','내 생활에 맞는 집','rental','housing',45,'교과서 연계: 청년의 주거 부담과 생활 안정',[
+ ('부담이 작은 공동주거',{'money':-15,'stability':9,'relations':7,'fatigue':5},'공간을 나누어 비용을 낮췄어요. 생활 규칙을 함께 정할 시간이 필요해요.',['house-rules']),
+ ('작은 독립 공간',{'money':-35,'satisfaction':10,'stability':8},'혼자 쉬기 편해요. 주거 비용을 꾸준히 준비해야 해요.'),
+ ('공공 주거 상담',{'preparation':10,'stability':5},'지원의 조건과 신청 절차를 확인했어요. 지금 집 문제의 해결은 더 시간이 걸려요.')])
+activity('shared-rules','함께 사는 집의 규칙','shared','relations',30,'교과서 연계: 양성평등과 공동의 돌봄 책임',[
+ ('모두의 시간표로 가사 나누기',{'relations':10,'stability':5,'fatigue':4},'성별에 따른 역할 대신 가능한 시간과 선호를 나누었어요.'),
+ ('내가 일단 모두 맡기',{'fatigue':15,'relations':3,'stability':4},'오늘 일은 빨리 끝났지만 오래 지속하기 어려워요. 역할 재조정이 필요해요.')],requires='house-rules')
+activity('budget','생활비 봉투 나누기','mart','finance',30,'교과서 연계: 노후 재무 준비와 현재의 생활비',[
+ ('비상금부터 남기기',{'money':-10,'stability':10,'preparation':10,'satisfaction':-3},'갑작스러운 지출을 위한 여유를 만들었어요. 즐기는 비용은 줄었어요.'),
+ ('경험에 먼저 쓰기',{'money':-20,'satisfaction':12,'growth':5,'stability':-3},'새 경험을 했어요. 다음 생활비도 확인해야 해요.'),
+ ('필수 지출 기록하기',{'stability':6,'preparation':7,'growth':4},'식비·주거비를 구분했어요. 실제로 절약할 항목은 다음에 정해요.')])
+activity('walking','작은 건강 루틴','town','health',30,'교과서 연계: 건강 영역 노후 준비',[
+ ('천천히 함께 걷기',{'health':10,'fatigue':-8,'relations':5},'몸을 움직이고 대화했어요. 빠른 기록보다 계속하는 습관을 만들어요.'),
+ ('체력 운동에 집중',{'health':12,'growth':5,'fatigue':8},'체력이 자랐어요. 운동 후 회복 시간도 필요해요.')])
+activity('rest','잠깐 쉬어 가기','cafe','rest',30,'확장 활동: 일과 휴식의 균형',[
+ ('무료 쉼터에서 숨 고르기',{'fatigue':-24,'health':5,'satisfaction':6},'지출 없이 회복했어요. 남은 시간에 무엇을 할지 다시 고를 수 있어요.'),
+ ('좋아하는 차와 독서',{'money':-8,'fatigue':-28,'satisfaction':10,'growth':2},'편안하게 회복했어요. 작은 지출도 생활비에 반영했어요.')])
+activity('learning','다시 배우는 도서관','library','learning',45,'확장 활동: 진로를 위한 준비와 평생 학습',[
+ ('새 분야를 넓게 읽기',{'growth':12,'preparation':6,'fatigue':7},'새로운 흥미를 발견했어요. 구체적인 실습으로 이어 갈 수 있어요.',['portfolio']),
+ ('한 분야 깊게 연습',{'growth':14,'preparation':10,'fatigue':12,'satisfaction':-2},'실력이 늘었어요. 다른 활동을 위한 시간을 조절해요.')])
+activity('friendship','친구의 약속을 듣기','culture','relations',40,'교과서 연계: 대인관계 영역 노후 준비',[
+ ('서로의 일정 존중',{'relations':12,'satisfaction':6,'fatigue':2},'함께 가능한 시간을 정했어요. 계속 관계를 이어 갈 계획을 세워요.'),
+ ('오늘은 내 휴식 우선',{'fatigue':-15,'health':4,'relations':-2},'쉴 시간이 생겼어요. 다음 만남의 날짜를 알려 관계를 돌볼 수 있어요.')])
+activity('care-network','돌봄을 함께 연결하기','care','care',50,'교과서 연계: 가족 변화, 돌봄의 사회적 책임, 양성평등',[
+ ('이웃·공공 서비스 연결',{'relations':8,'stability':8,'preparation':6,'fatigue':6},'누군가 혼자 떠안지 않도록 도움을 연결했어요. 운영 조건을 확인해야 해요.',['care-check']),
+ ('내가 가능한 시간 맡기',{'relations':10,'fatigue':12,'satisfaction':5},'곁에서 도왔어요. 다음에는 분담할 사람과 시간을 정해요.'),
+ ('기관의 정보부터 확인',{'preparation':10,'growth':5,'fatigue':3},'도움받을 곳을 찾았어요. 실제 필요와 이용 조건을 맞춰야 해요.')])
+activity('equality','일과 생활 시간표','office','balance',40,'교과서 연계: 일·가정 양립과 양성평등',[
+ ('유연근무와 공동 돌봄 제안',{'relations':7,'health':5,'stability':7,'preparation':5},'모두에게 가능한 근무·돌봄 시간을 제안했어요. 합의하는 시간이 필요해요.'),
+ ('이번 주 추가 근무',{'money':20,'fatigue':15,'satisfaction':-4,'relations':-4},'생활자금이 늘었어요. 휴식과 관계 시간은 줄었어요.'),
+ ('급여 줄이고 시간 확보',{'money':-10,'fatigue':-12,'relations':8,'satisfaction':8},'생활을 돌볼 시간이 생겼어요. 생활비 계획도 함께 바꿔요.')])
+activity('generation','세대가 함께하는 정원','welfare','community',45,'교과서 연계: 세대 협동과 고령친화 환경',[
+ ('모두 쓰는 높이의 화단',{'relations':10,'growth':6,'stability':5,'fatigue':8},'앉아서도 돌볼 수 있게 했어요. 서로 다른 이동·활동 조건을 존중해요.'),
+ ('어르신에게 기술 배우기',{'growth':9,'relations':12,'preparation':3},'경험을 배우고 새 도구 사용법도 함께 나누었어요.')])
+activity('accessibility','이동하기 편한 마을','hall','policy',45,'교과서 연계: 고령친화 환경과 사회적 준비',[
+ ('보행로·안내판 정비',{'money':-10,'stability':10,'relations':6,'preparation':8},'여러 주민의 이동이 편해졌어요. 유지 관리가 필요해요.'),
+ ('다양한 주민의 의견 수집',{'growth':7,'relations':8,'preparation':8},'내가 못 보던 불편을 찾았어요. 시설을 바꾸기 위한 후속 행동이 필요해요.')])
+activity('family-choice','서로 다른 삶을 존중하기','home','family',30,'교과서 연계: 저출산·고령화의 원인과 개인·가정에 미치는 영향',[
+ ('주거·고용·돌봄 조건 살피기',{'preparation':12,'growth':8,'stability':3},'개인의 선택만으로 설명하기 어려운 생활 조건을 찾았어요.'),
+ ('서로의 생활 방식 듣기',{'relations':12,'satisfaction':5,'growth':5},'결혼·출산·가족 형태에 정답을 두지 않고 필요한 도움을 이야기했어요.')])
+activity('future-prep','네 가지 미래 준비','home','preparation',45,'교과서 연계: 재무·건강·여가·대인관계 영역의 노후 준비',[
+ ('네 영역에 작은 실천 하나씩',{'preparation':14,'stability':6,'health':5,'relations':5,'satisfaction':5},'저축·걷기·취미·연락 계획을 나누었어요. 변화에 맞춰 조정할 수 있어요.'),
+ ('내 부족한 영역부터 준비',{'preparation':10,'growth':8,'stability':4},'우선순위를 정했어요. 다른 영역도 다음 계획에 포함해요.')])
+activity('hobby','내가 좋아하는 작은 전시','culture','leisure',40,'교과서 연계: 여가 영역 노후 준비',[
+ ('무료 작품 만들기',{'satisfaction':13,'growth':6,'fatigue':4},'비용을 크게 쓰지 않고 취미를 즐겼어요. 결과보다 즐긴 과정도 중요해요.'),
+ ('취미 모임에 참여',{'money':-12,'satisfaction':12,'relations':8,'fatigue':5},'새 사람과 만났어요. 모임 비용과 시간을 계속 확인해요.')])
+activity('volunteer','마을의 작은 봉사','nursery','community',40,'교과서 연계: 세대 협동과 공동 돌봄',[
+ ('놀이 도구 함께 정리',{'relations':9,'satisfaction':7,'growth':4,'fatigue':9},'안전한 공간을 만드는 데 보탰어요. 모두의 역할이 필요해요.'),
+ ('안내 자료 만들기',{'growth':8,'preparation':5,'relations':5,'fatigue':6},'다른 사람도 참여하기 쉬운 정보를 만들었어요.')])
+activity('portfolio','내 체험 포트폴리오','career','learning',35,'확장 활동: 체험 결과를 바탕으로 진로 계획 조정',[
+ ('실패와 배움을 정리',{'growth':8,'preparation':12,'satisfaction':4},'실패도 다음 선택의 자료로 남겼어요.'),
+ ('새로운 직업 비교',{'growth':10,'preparation':8},'다른 분야를 비교했어요. 한 직업을 정답으로 고르지 않아도 돼요.')],requires='portfolio')
+activity('care-check','돌봄 연결 뒤의 확인','care','care',30,'교과서 연계: 돌봄의 사회적 책임과 지속 가능한 분담',[
+ ('이용자와 담당자에게 확인',{'relations':9,'stability':8,'preparation':4},'도움이 실제로 닿았는지 확인하고 역할을 조정했어요.'),
+ ('내 시간 한계 전달',{'health':5,'fatigue':-8,'relations':6},'지속하려면 서로 가능한 범위를 알려야 한다는 걸 배웠어요.')],requires='care-check')
+
+jobs=[
+ ('barista','바리스타','cafe','recipe','주문을 읽고 음료를 만드는 순서를 골라요.',[
+ ('우유 알레르기가 있는 손님의 주문은?',['일반 우유로 만들기','식물성 대체 재료와 도구를 확인하기','얼음만 빼기'],1,'주문 조건과 도구를 먼저 확인해요.'),
+ ('따뜻한 차를 만드는 순서는?',['주문 확인 → 물 데우기 → 추출','추출 → 주문 확인 → 물 데우기','물 붓기 → 컵 확인 → 주문 받기'],0,'준비와 확인은 만들기보다 앞에 있어요.'),
+ ('완성한 음료를 건넬 때는?',['아무 컵이나 건네기','고객 이름·주문 내용 다시 확인','바로 다음 주문 시작'],1,'마지막 확인으로 잘못된 제공을 줄여요.')]),
+ ('designer','디자이너','culture','pattern','요청의 조건과 시각적 규칙에 맞는 디자인을 고르세요.',[
+ ('초록·노랑·초록·노랑 다음 색은?',['초록','파랑','보라'],0,'반복 규칙을 찾아요.'),
+ ('밤에도 읽기 쉬운 안내판은?',['검정 글자+검정 배경','큰 글자+명확한 명암 차','작은 장식 글자'],1,'사용할 사람과 환경을 고려해요.'),
+ ('사용자 의견을 받은 뒤에는?',['그대로 확정','의견을 분류하고 시안을 수정','의견을 지우기'],1,'피드백은 다음 시안을 만드는 자료예요.')]),
+ ('developer','개발자','office','sequence','로봇의 동작 순서를 디버깅해 보세요.',[
+ ('출발(0,0)에서 (1,1)로 이동하는 명령은?',['오른쪽→아래','왼쪽→아래','아래→아래'],0,'가로와 세로를 하나씩 이동해요.'),
+ ('장애물이 바로 앞에 있다면?',['그대로 전진','주변 길 확인→우회','종료만 반복'],1,'조건을 확인하고 다른 경로를 골라요.'),
+ ('완성한 프로그램을 확인하는 방법은?',['한 번만 보고 끝내기','출발·도착·막힌 길을 각각 시험','이름만 바꾸기'],1,'여러 상황을 시험해야 오류를 찾을 수 있어요.')]),
+ ('nurse','간호사','hospital','diagnosis','건강 문제를 판단하는 모의 체험이에요. 실제 의료 처치 안내가 아니에요.',[
+ ('갑자기 쓰러진 사람이 보이면?',['전문 담당자에게 즉시 알리고 도움 요청','물을 억지로 먹이기','사진 찍기'],0,'직접 판단해 약을 주지 않고 전문 인력에게 연결해요.'),
+ ('상담 전에 확인할 정보는?',['좋아하는 색만','불편한 증상·시작 시각·기존 정보','성적만'],1,'정확한 관찰과 전달을 연습해요.'),
+ ('기록에 적을 내용은?',['추측을 사실처럼','확인한 사실과 시각','다른 사람의 소문'],1,'사실을 구분해 전달하는 책임이 있어요.')]),
+ ('teacher','교사','career','lesson','학생의 상황에 맞는 수업과 피드백을 고르세요.',[
+ ('분수를 어려워하는 학생에게는?',['같은 설명을 더 크게','그림과 조각으로 나누어 보기','바로 시험만 보기'],1,'다른 표현을 사용해 이해를 도와요.'),
+ ('모둠에서 한 명만 발표한다면?',['역할을 돌아가며 맡기','그대로 두기','조용한 학생 제외'],0,'배울 기회를 함께 나누어요.'),
+ ('틀린 답을 받은 뒤에는?',['왜 그렇게 생각했는지 묻기','공개적으로 놀리기','바로 말 끊기'],0,'생각의 과정을 듣고 다음 시도를 도와요.')]),
+ ('social-worker','사회복지사','welfare','route','필요와 지원 기관을 연결하는 경로를 선택하세요.',[
+ ('주거 상담이 필요한 청년은 어디로 연결할까요?',['주거 지원 상담 창구','제과 실습','공연장'],0,'문제에 맞는 기관을 연결해요.'),
+ ('이동이 불편한 주민의 돌봄 상담은?',['방문·이동 지원 가능 여부 확인','방문을 포기하도록 안내','인터넷으로만 신청 요구'],0,'접근성도 함께 확인해요.'),
+ ('기관을 안내한 뒤 다음 행동은?',['연락 없이 종료','이용 가능 여부와 연결 결과 확인','같은 주소만 반복'],1,'안내가 실제 도움으로 이어졌는지 살펴요.')]),
+ ('entrepreneur','작은 가게 운영자','shop','budget','가게의 수입과 비용을 비교해 지속 가능한 운영을 골라요.',[
+ ('매출 50, 재료 20, 임대 15일 때 남는 금액은?',['35','15','50'],1,'매출에서 비용을 빼야 해요.'),
+ ('수입이 줄 때 먼저 할 일은?',['고정비·변동비 기록','빚으로 무조건 확장','가격을 감으로 정하기'],0,'상황을 알면 조정할 방법을 찾을 수 있어요.'),
+ ('직원의 쉬는 시간을 지키려면?',['교대 시간표와 주문량 조정','쉴 시간을 없애기','혼자 모두 맡기'],0,'수입뿐 아니라 일하는 사람의 조건을 고려해요.')]),
+ ('researcher','환경 연구원','library','schedule','관찰 기록과 실험 조건을 비교해 결론을 고르세요.',[
+ ('식물 성장에서 물의 영향을 비교하려면?',['빛·흙 조건은 같게, 물 양만 다르게','모든 조건을 동시에 바꾸기','사진만 삭제하기'],0,'비교할 요소를 분리해요.'),
+ ('기록 3, 5, 7, 9의 다음 예상은?',['2','11','20'],1,'관찰된 규칙에서 예상해요. 실제 결과는 다를 수도 있어요.'),
+ ('예상과 결과가 다를 때는?',['결과를 바꾸기','조건과 기록을 점검하고 다시 조사','실험을 숨기기'],1,'불일치는 다음 조사의 출발점이에요.')])
+]
+for id,title,map,type,instructions,steps in jobs:
+    activity('job-'+id,title+' 체험',map,'career',55,'확장 활동: 다양한 직업 경험과 일·생활의 균형',[
+     ('짧은 실습으로 적성 살피기',{'money':12,'growth':8,'fatigue':10,'satisfaction':6},'짧게 해 보며 맞는 점과 어려운 점을 찾았어요. 직업을 확정하지 않아도 돼요.',['portfolio']),
+     ('집중 근무를 체험',{'money':25,'growth':10,'fatigue':20,'satisfaction':2,'relations':-3},'더 많은 생활자금과 경험을 얻었어요. 관계와 회복 시간도 계획해요.',['portfolio'])],career=id,minigame=dict(type=type,instructions=instructions,steps=[dict(prompt=p,options=o,correct=c,explanation=e) for p,o,c,e in steps]))
+
+events=[]
+def event(id,title,story,trigger,choices):events.append(dict(id=id,title=title,story=story,trigger=trigger,choices=[dict(label=l,effect=e,consequence=c) for l,e,c in choices]))
+event('repair','집에 작은 고장이 났어요','생활비 계획에 없던 수리 비용이 생겼어요. 비용과 도움을 비교해요.','housing',[
+ ('전문 수리를 요청',{'money':-18,'stability':10,'fatigue':-3},'비용은 들었지만 안정적인 생활을 회복했어요.'),('공공 상담과 공동 해결',{'stability':6,'relations':6,'fatigue':7},'함께 해결했어요. 시간이 더 걸리고 도움이 가능한 범위를 확인했어요.')])
+event('overtime','갑자기 추가 근무 요청','오늘 친구와 만날 예정인데 바쁜 근무 시간이 겹쳤어요.','career',[
+ ('이번만 돕고 다음 휴식 협의',{'money':18,'fatigue':12,'relations':-3},'수입을 얻었어요. 지속 가능한 근무 범위를 이야기해요.'),('교대 가능한 사람과 조정',{'relations':6,'stability':4,'fatigue':3},'일정을 나누었어요. 나도 다른 날 돕기로 했어요.')])
+event('care-gap','돌봄 시간에 빈틈이 생겼어요','돌봄 담당자가 급한 일정이 생겼어요. 한 사람에게 몰리지 않는 방법을 찾아요.','care',[
+ ('가능한 시간을 나누기',{'relations':8,'fatigue':8,'stability':6},'여러 사람이 가능한 시간을 나누었어요.'),('지역 서비스 상담 연결',{'preparation':8,'stability':7,'fatigue':4},'이용 조건을 확인하고 다음 대안을 찾았어요.')])
+event('tired','몸이 쉬어 달라고 해요','여러 활동을 하느라 집중력이 떨어졌어요.','health',[
+ ('약속을 조정하고 쉬기',{'fatigue':-25,'health':8,'satisfaction':5},'내 상태를 알리고 회복 시간을 만들었어요.'),('필수 일만 남기기',{'fatigue':-12,'health':5,'stability':5},'중요한 활동부터 하고 나머지는 다음으로 미뤘어요.')])
+event('invitation','새로운 모임에 초대받았어요','처음 만나는 사람들과 작은 취미 모임을 할 수 있어요.','leisure',[
+ ('처음 한 번 참여',{'money':-8,'relations':10,'satisfaction':8,'fatigue':5},'새로운 관계가 생겼어요. 앞으로의 비용과 시간을 확인해요.'),('다음 무료 모임 예약',{'relations':5,'preparation':5},'현재 자원을 지키며 다음 기회를 준비했어요.')])
+event('income-change','이번 달 수입이 바뀌었어요','근무 시간이 줄어 생활비 계획을 조정해야 해요.','finance',[
+ ('필수 지출부터 재계획',{'money':-8,'stability':8,'preparation':10,'satisfaction':-3},'우선 지켜야 할 생활비를 정했어요.'),('다른 일과 지원 정보를 탐색',{'growth':8,'preparation':10,'fatigue':8},'새로운 가능성을 찾았어요. 당장 수입이 생기는 것은 아니에요.')])
+event('blocked-way','평소 다니던 길이 막혔어요','공사로 주민과 어르신이 이동하기 어려워졌어요.','policy',[
+ ('안전한 우회로 안내',{'relations':8,'stability':5,'fatigue':5},'오늘의 이동을 도왔어요. 임시 경로도 안전해야 해요.'),('여러 주민 의견으로 개선 요청',{'preparation':10,'growth':6,'relations':6},'다양한 이동 조건을 모아 장기적인 변화를 제안했어요.')])
+event('new-interest','새로운 흥미를 발견했어요','예상하지 못한 분야가 즐거웠어요. 처음 계획을 바꾸어도 괜찮아요.','learning',[
+ ('다음 체험을 작게 예약',{'growth':10,'preparation':8,'satisfaction':6},'한 번에 모든 것을 바꾸지 않고 다음 경험을 계획했어요.'),('기존 계획과 비교 기록',{'preparation':12,'stability':5},'내가 중요하게 여기는 조건을 비교해 계획을 조정했어요.')])
+endings=[
+ dict(id='explorer',title='가능성을 찾는 탐험가',description='여러 가능성을 경험하는 중이에요. 가장 의미 있었던 체험과 다음에 더 알아볼 것을 적어 보세요.'),
+ dict(id='balanced',title='함께 균형을 만드는 미래',description='재무·건강·관계·준비를 함께 돌보았어요. 균형은 고정된 정답이 아니라 상황에 맞춰 계속 조정하는 과정이에요.'),
+ dict(id='resilient',title='변화에 대처하는 미래',description='예상하지 못한 상황에서 계획을 조정했어요. 도움을 요청하고 다시 준비하는 선택이 미래를 바꾸었어요.'),
+ dict(id='community',title='관계와 협동을 잇는 미래',description='이웃과 관계를 만들고 책임을 나누었어요. 내 시간과 건강도 함께 돌보며 지속할 방법을 생각해 보세요.'),
+ dict(id='learner',title='계속 배우는 미래',description='여러 경험으로 성장했어요. 배움에 필요한 휴식·생활비·관계도 다음 계획에 포함해 보세요.'),
+ dict(id='steady',title='차근차근 기반을 만드는 미래',description='생활의 안정에 힘을 쏟았어요. 즐거움과 새로운 경험에 쓸 작은 여유도 만들 수 있어요.'),
+ dict(id='creative',title='즐거움을 만들어 가는 미래',description='취미와 경험으로 만족을 찾았어요. 계속 즐기기 위한 생활비·건강·관계 계획을 함께 살펴보세요.'),
+ dict(id='replan',title='잠시 쉬고 다시 설계하는 미래',description='많은 활동으로 피로가 쌓였어요. 실패한 미래가 아니에요. 휴식하고 도움을 연결해 다시 선택할 수 있어요.')]
+data=dict(version=1,notes='직업 체험과 자유 자원 시스템은 확장 활동입니다. 교과서 직접 연계 내용은 각 concept에 표시합니다. 점수는 삶의 우열이나 실제 미래 예측이 아닙니다.',activities=activities,events=events,endings=endings)
+(root/'activities.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+print(f'{len(activities)} activities, {len(events)} events, {len(jobs)} careers, {len(endings)} endings')

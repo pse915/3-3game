@@ -1,0 +1,22 @@
+{
+  "version": "5.3",
+  "originalAssetsPreserved": true,
+  "assets": [
+    {
+      "file": "buildings-ruin.png",
+      "grid": [
+        4,
+        4
+      ],
+      "cellUnits": "image.width / 4, image.height / 4",
+      "generated": true
+    },
+    {
+      "file": "school-ruin.png",
+      "layout": "original L-shaped school footprint",
+      "generated": true
+    }
+  ],
+  "proceduralOverlays": "crisis.js: broken windows, roof gaps, shutters, cracks, weeds, worn desks, repaired roads, benches, care, housing and learning facilities",
+  "collision": "All variants and decals are visual only; original solid arrays and portals remain authoritative."
+}

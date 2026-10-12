@@ -1,0 +1,291 @@
+{
+  "version": 3,
+  "tileSize": 32,
+  "characterFrame": [
+    32,
+    48
+  ],
+  "characterSheet": {
+    "columns": 8,
+    "rows": 4,
+    "directions": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "walkColumns": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "runColumns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "npcSheet": {
+    "columns": 7,
+    "rows": 5,
+    "frame": [
+      32,
+      48
+    ],
+    "animation": "front idle only"
+  },
+  "objectAtlases": {
+    "environment": [
+      4,
+      4,
+      256,
+      256
+    ],
+    "buildings": [
+      4,
+      4,
+      256,
+      256
+    ],
+    "furniture": [
+      4,
+      4,
+      256,
+      256
+    ],
+    "facilities": [
+      4,
+      4,
+      256,
+      256
+    ],
+    "details": [
+      4,
+      4,
+      256,
+      256
+    ]
+  },
+  "qualityGate": "PARTIAL: original environment atlas and six avatars replaced; other original atlases retained; external reference and real-device validation unavailable",
+  "assets": [
+    {
+      "file": "avatars-preview.png",
+      "width": 768,
+      "height": 3456,
+      "mode": "RGBA",
+      "sha256": "89bf2e63204ad18e7ea23eaff8e898970474872f0517b63ddce2bdbd54af8db6",
+      "source": false
+    },
+    {
+      "file": "avatars.png",
+      "width": 256,
+      "height": 1152,
+      "mode": "RGBA",
+      "sha256": "f53f97a47a9406185251fc8689e065496eee15c7a6220c2d07cbae75e406280f",
+      "source": false
+    },
+    {
+      "file": "buildings-source.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "7c0b4d76b0adfe1659dc256da651d87e052fe183e55b722a83dd036e9be76d97",
+      "source": true
+    },
+    {
+      "file": "buildings.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "e83f59613def60a72ca928d4bb399eb292b947c06a1c769cd589ebe79bac035e",
+      "source": false
+    },
+    {
+      "file": "characters-source.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "sha256": "a6fcdb42dd3fdd423b1f59b30325f70fe043b4238097ae7a0794bf8cee44c87b",
+      "source": true
+    },
+    {
+      "file": "characters.png",
+      "width": 256,
+      "height": 192,
+      "mode": "RGBA",
+      "sha256": "fabf952735db46ddfa4e3c8404c8817e1065bbaa1c47e114aa4fd223c4f6c30d",
+      "source": false
+    },
+    {
+      "file": "details-source.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "b3a90a1e4a92c9e95f509ba355adc1e7d519e68a93a5947e6425ffdba430938a",
+      "source": true
+    },
+    {
+      "file": "details.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "c0d050098413498b5b7636b6d8994558c7f0a41d59ad5e5073b9559c46fb99d5",
+      "source": false
+    },
+    {
+      "file": "diary-panel.png",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "sha256": "ae9cbf083805496f1ed5e4a80f98aa309bcade816f268cd08c45a0ac73db75a1",
+      "source": false
+    },
+    {
+      "file": "environment-source.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "09e99c21fb078f8a7def039cd67777bf7e934c82f3c033a000d72f40b3ef95c0",
+      "source": true
+    },
+    {
+      "file": "environment.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "34b662de3b8cb3a3009cc2efc28f842cfb2b0064fe676831a9ad9d0b2fcc2da2",
+      "source": false
+    },
+    {
+      "file": "facilities-source.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "984f130df052a2153685644374dc59c45dad788ad738608f58ab5425e6f5d883",
+      "source": true
+    },
+    {
+      "file": "facilities.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "8ada039f5da4e229290a62a99591aeb98b2891f7ba6192862f3d58c342ecf479",
+      "source": false
+    },
+    {
+      "file": "furniture-source.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "sha256": "96943489ed37135cdf0e97a609b78a6a69125b4965ec54f4292399fdbcd49e10",
+      "source": true
+    },
+    {
+      "file": "furniture.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "sha256": "c769dbe97b3fda1e42a6108026949774c09a680f1981d9a9cd8feecfa4739ac5",
+      "source": false
+    },
+    {
+      "file": "npcs-source.png",
+      "width": 1402,
+      "height": 1122,
+      "mode": "RGBA",
+      "sha256": "f393aecd6b0e69bf838806fcbd5e4a8c1994833997a9ad32eff3f813f03dde0a",
+      "source": true
+    },
+    {
+      "file": "npcs.png",
+      "width": 224,
+      "height": 240,
+      "mode": "RGBA",
+      "sha256": "6e3cf15087d0ce9daff4d8fdbc2b8edb31adad0ffedfd8ed0b41067fa30f0952",
+      "source": false
+    },
+    {
+      "file": "portraits.png",
+      "width": 672,
+      "height": 480,
+      "mode": "RGBA",
+      "sha256": "dc050ea497718e7857e4e192402d91ffdc19e9bf96aeec11411da5c064c69257",
+      "source": false
+    },
+    {
+      "file": "school-source.png",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "sha256": "97805eadc87d6d7650c6edbe7108be920973bc923bc3c9223b6ff22c86a0d0cf",
+      "source": true
+    },
+    {
+      "file": "school.png",
+      "width": 864,
+      "height": 448,
+      "mode": "RGBA",
+      "sha256": "2901f94aacdd70f6544ee01aa2eb58d208e4d875a91e902bd051c5876fe81f54",
+      "source": false
+    },
+    {
+      "file": "terrain.png",
+      "width": 1536,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "417f3ab0ee6ab8500ef957717588c0b279f823bd941690cf01bd2d6505363e41",
+      "source": false
+    },
+    {
+      "file": "ui-icons.png",
+      "width": 256,
+      "height": 32,
+      "mode": "RGBA",
+      "sha256": "8275bd81a6a111f2f42cbfe3539d629a97aa7ae7d30714d06aae4c0b47a74e7c",
+      "source": false
+    }
+  ],
+  "environmentSource": "original generated atlas 2026-10-11; normalized from 1254x1254",
+  "avatarSheet": {
+    "file": "avatars.png",
+    "originalAuthoring": "tools/build_avatars.py",
+    "avatars": 6,
+    "frame": [
+      32,
+      48
+    ],
+    "columns": 8,
+    "directionRows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "avatarHeight": 192,
+    "walkFrames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "runFrames": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "styles": [
+      "bob",
+      "pony",
+      "long",
+      "short",
+      "curly",
+      "braid"
+    ],
+    "variants": "distinct hairstyle, skin, clothing and satchel; no hue rotation",
+    "sha256": "f53f97a47a9406185251fc8689e065496eee15c7a6220c2d07cbae75e406280f"
+  },
+  "schoolEvidence": "data/school_evidence.json"
+}

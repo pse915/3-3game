@@ -1,0 +1,6 @@
+{
+  "maps": 80,
+  "roomCount": 58,
+  "checks": "spawn reachability; interaction adjacency; portal target and arrival bounds; solid arrival",
+  "errors": []
+}

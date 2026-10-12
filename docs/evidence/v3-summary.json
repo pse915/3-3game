@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "javascriptTests": 19,
+  "pythonTests": 11,
+  "legacyStoryPaths": 243,
+  "maps": 80,
+  "schoolRooms": 58,
+  "totalIndoorRooms": 74,
+  "freeActivities": 25,
+  "handsOnCareers": 8,
+  "events": 8,
+  "futureTypes": 8,
+  "collectibleFragments": 8,
+  "chromeRegression": true,
+  "chromeTouchEmulation": true,
+  "streamlitCheckpointAck": true,
+  "liveGoogleSheets": false,
+  "realSchoolPlanVerified": false,
+  "physicalTabletVerified": false,
+  "webkit": "not run: missing host dependency",
+  "acceptance": "partial; see docs/QA-v3.md"
+}

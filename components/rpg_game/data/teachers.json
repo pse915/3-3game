@@ -1,0 +1,104 @@
+[
+  {
+    "classroom": "1-1",
+    "name": "기술썜",
+    "subject": "일본어/진로활동",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "1-2",
+    "name": "기술썜",
+    "subject": "기술가정",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "1-3",
+    "name": "기술썜",
+    "subject": "음악",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "1-4",
+    "name": "기술썜",
+    "subject": "수학",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "1-5",
+    "name": "기술썜",
+    "subject": "과학",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-1",
+    "name": "기술썜",
+    "subject": "한문",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-2",
+    "name": "기술썜",
+    "subject": "수학",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-3",
+    "name": "기술썜",
+    "subject": "과학",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-4",
+    "name": "기술썜",
+    "subject": "역사",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-5",
+    "name": "기술썜",
+    "subject": "국어",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "2-6",
+    "name": "기술썜",
+    "subject": "음악/스포츠",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-1",
+    "name": "기술썜",
+    "subject": "국어",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-2",
+    "name": "기술썜",
+    "subject": "영어",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-3",
+    "name": "기술썜",
+    "subject": "사회/역사",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-4",
+    "name": "기술썜",
+    "subject": "수학",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-5",
+    "name": "기술썜",
+    "subject": "사회",
+    "fictionalAppearance": true
+  },
+  {
+    "classroom": "3-6",
+    "name": "기술썜",
+    "subject": "도덕",
+    "fictionalAppearance": true
+  }
+]

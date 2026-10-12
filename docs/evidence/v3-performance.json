@@ -1,0 +1,28 @@
+{
+  "environment": "Windows Chrome headless, viewport 1024x768, CPU throttle 4x",
+  "seconds": 24,
+  "samples": [
+    {
+      "fps": 59.236802381265484,
+      "cache": 2,
+      "heap": 7268808
+    },
+    {
+      "fps": 59.74189047217005,
+      "cache": 2,
+      "heap": 4786240
+    },
+    {
+      "fps": 59.922090069227735,
+      "cache": 2,
+      "heap": 5208159
+    },
+    {
+      "fps": 59.907490204433714,
+      "cache": 2,
+      "heap": 5274019
+    }
+  ],
+  "actualTablet": false,
+  "longDurationMemoryVerified": false
+}
